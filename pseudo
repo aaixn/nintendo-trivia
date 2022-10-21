@@ -1,0 +1,43 @@
+array questions = [
+    {
+        question
+        answer 1
+        answer 2
+        answer 3
+        answer 4
+        function correctAnswer(selectedAnswer)
+            if selectedAnswer === correct 
+                return true
+            else 
+                return false
+    }
+]
+
+
+
+turn starts at 1
+function turnCounter
+    if turn is odd
+        it is player 1s turn
+    else if turn is even
+        it is player 2's turn
+
+    increment turn
+
+function addScore
+    if correctAnswer is true
+        add a point to the players score
+
+function game
+    while turn is greater than 0
+        grab a random question
+        display the question, and options on the screen
+        look whose turn it is
+        let player click on an option, save that value to selectedAnswer
+            
+            if the correctAnswer is true
+                addScore()
+            else
+                higlight red
+
+    
