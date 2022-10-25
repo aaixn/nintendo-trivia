@@ -16,9 +16,9 @@ let player2CurrentScore = 0
 let questions = null
 
 
-welcomeModal.addEventListener('keypress', evt => {
-    if(evt.key == 'Enter') {
-        evt.preventDefault()
+welcomeModal.addEventListener('keydown', event => {
+    if(event.key == 'Enter') {
+        event.preventDefault()
         welcomeModal.style.display = 'none'
     }
 })
