@@ -16,12 +16,12 @@ let player2CurrentScore = 0
 let questions = null
 
 
-welcomeModal.addEventListener('keydown', event => {
-    if(event.key == 'Enter') {
-        event.preventDefault()
-        welcomeModal.style.display = 'none'
-    }
-})
+// welcomeModal.addEventListener('keydown', event => {
+//     if(event.key == 'Enter') {
+//         event.preventDefault()
+//         welcomeModal.style.display = 'none'
+//     }
+// })
 
 
 //turn

@@ -16,7 +16,7 @@
 
 </head>
 <body>
-    <div class="modal" id="welcome-modal" tabindex="-1">
+    <!-- <div class="modal" id="welcome-modal" tabindex="-1">
         <div id="welcome">
             <h1>
                 <span class="blue">W</span><span class="yellow">e</span><span class="red">l</span><span class="green">c</span><span class="yellow">o</span><span class="red">m</span><span class="green">e</span>
@@ -35,12 +35,39 @@
                 <span>.</span> <span>.</span> <span>.</span>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <div class="modal" id="character-modal">
-        <div id="character-select">
-            <h1 id="character-title">Choose Your Character</h1>
+        <div id="character-title">
+            <h1>Choose Your Character</h1>
+        </div>
+        <h2>Player 1 Choose</h2>
+        <div id="characters">
+            <div class="character" id="char1"></div>
+            <div class="character" id="char2"></div>
+            <div class="character" id="char3"></div>
+            <div class="character" id="char4"></div>
+            <div class="character" id="char5"></div>
+            <div class="character" id="char6"></div>
+            <div class="character" id="char7"></div>
+            <div class="character" id="char8"></div>
+        </div>
+        <div id="player-input">
+            <div class="players-select" id="player1-chara">
+                <h1>Player 1</h1>
+                <input type="text" placeholder="Player 1 Name" class="input" id="player1-input">
+                <img src="" class="char-selected" id="player1-char-selected">
+            </div>
+            <div id="between-players">
+                <h1 id="vs">VS.</h1>
+                <button type="button" id="start-button">start</button>
+            </div>
+            <div class="players-select" id="player2-chara">
+                <h1>Player 2</h1>
+                <input type="text" placeholder="Player 2 Name" class="input" id="player2-input">
+                <img src="" class="char-selected" id="player1-char-selected">
+            </div>
         </div>
     </div>
 
