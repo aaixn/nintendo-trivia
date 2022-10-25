@@ -11,18 +11,10 @@ let player1Name = document.querySelector('#player1-name')
 let player2Name = document.querySelector('#player2-name')
 let player1Score = document.querySelector('#player1-score')
 let player2Score = document.querySelector('#player2-score')
-let welcomeModal = document.querySelector('#welcome-modal')
 let player1CurrentScore = 0
 let player2CurrentScore = 0
 let questions = null
 
-
-// welcomeModal.addEventListener('keypress', evt => {
-//     if(evt.key == 'Enter') {
-//         evt.preventDefault()
-//         welcomeModal.style.display = 'none'
-//     }
-// })
 
 
 //turn
@@ -111,7 +103,6 @@ fetch(url)
     .then(res => res.json())
     .then(res => {
         questions = res.items.map((element) => element.fields)
-        // game(questions)
         initialState(questions[0])
     })
 
