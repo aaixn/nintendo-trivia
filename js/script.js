@@ -1,4 +1,3 @@
-//array of questions (each are an object)
 const url = 'https://cdn.contentful.com/spaces/e058krihw4z0/environments/master/entries?access_token=I_an8ZFVPYiQvNyFUHm_e2yy6QYVDkWYvUu6Etd23ZI'
 let category = document.querySelector('#category')
 let img = document.querySelector('#question-img')
@@ -34,6 +33,8 @@ const togglePlayer = () => {
         return 2
     }
 }
+
+
 
 const empty = () => {
     answers.forEach(element => element.style.backgroundColor = 'darkSalmon')
