@@ -16,6 +16,13 @@ let player2CurrentScore = 0
 let questions = null
 
 
+welcomeModal.addEventListener('keypress', evt => {
+    if(evt.key == 'Enter') {
+        evt.preventDefault()
+        welcomeModal.style.display = 'none'
+    }
+})
+
 
 //turn
 player1Name.style.textShadow = '4px 3px darkSeaGreen'
