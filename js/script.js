@@ -11,17 +11,29 @@ let player1Name = document.querySelector('#player1-name')
 let player2Name = document.querySelector('#player2-name')
 let player1Score = document.querySelector('#player1-score')
 let player2Score = document.querySelector('#player2-score')
+let welcomeModal = document.querySelector('#welcome-modal')
+const characterModal = document.querySelector('#character-modal')
+let player1Input = document.querySelector('#player1-input')
+let player2Input = document.querySelector('#player2-input')
+const startButton = document.querySelector('#start-button')
 let player1CurrentScore = 0
 let player2CurrentScore = 0
 let questions = null
 
 
-// welcomeModal.addEventListener('keydown', event => {
-//     if(event.key == 'Enter') {
-//         event.preventDefault()
-//         welcomeModal.style.display = 'none'
-//     }
-// })
+welcomeModal.addEventListener('keydown', event => {
+    if(event.key == 'Enter') {
+        event.preventDefault()
+        welcomeModal.style.display = 'none'
+    }
+})
+
+startButton.addEventListener('click', () => {
+    player1Name.innerText = player1Input.value      
+    player2Name.innerText = player2Input.value
+    characterModal.style.display = 'none'
+})
+
 
 
 //turn
