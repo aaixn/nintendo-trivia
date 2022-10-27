@@ -168,4 +168,5 @@ fetch(url)
         questions = res.items.map((element) => element.fields)
         initialState(questions[0])
     })
+    .catch(err => console.log('Something went wrong...', err))
 
