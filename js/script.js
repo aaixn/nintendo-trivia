@@ -1,4 +1,3 @@
-//array of questions (each are an object)
 const url = 'https://cdn.contentful.com/spaces/e058krihw4z0/environments/master/entries?access_token=I_an8ZFVPYiQvNyFUHm_e2yy6QYVDkWYvUu6Etd23ZI'
 let category = document.querySelector('#category')
 let img = document.querySelector('#question-img')
@@ -8,8 +7,6 @@ let ans1 = document.querySelector('#ans1')
 let ans2 = document.querySelector('#ans2')
 let ans3 = document.querySelector('#ans3')
 let ans4 = document.querySelector('#ans4')
-let player1 = document.querySelector('#player1')
-let player2 = document.querySelector('#player1')
 let player1Name = document.querySelector('#player1-name')
 let player2Name = document.querySelector('#player2-name')
 let player1Score = document.querySelector('#player1-score')
@@ -34,6 +31,8 @@ const togglePlayer = () => {
         return 2
     }
 }
+
+
 
 const empty = () => {
     answers.forEach(element => element.style.backgroundColor = 'darkSalmon')
@@ -96,50 +95,6 @@ answers.forEach(element => element.addEventListener('click', event => {
 
 }))
 
-// const game = (questions) => {
-//     for (let i = 0; i < questions.length; i++) {
-//         category.innerText = questions[i].category
-//         img.src = questions[i].imageSource
-//         question.innerText = questions[i].question
-//         ans1.innerText = questions[i].a
-//         ans2.innerText = questions[i].b
-//         ans3.innerText = questions[i].c
-//         ans4.innerText = questions[i].d
-//     }
-// }
-
-
-
-
-
-
-
-
-// const game = (questions) => {
-//     for (let i = 0; i < questions.length; i++) {
-//         category.innerText = questions[i].category
-//         img.src = questions[i].imageSource
-//         question.innerText = questions[i].question
-//         ans1.innerText = questions[i].a
-//         ans2.innerText = questions[i].b
-//         ans3.innerText = questions[i].c
-//         ans4.innerText = questions[i].d
-//         answers.forEach(element => element.addEventListener('click', checkAnswer = () => {
-//             if (event.target.innerText === questions[i].correct) {
-//                 event.target.style.backgroundColor = 'darkSeaGreen'
-//                 turn++
-//                 togglePlayer();
-//             } else {
-//                 event.target.style.backgroundColor = 'tomato'
-//                 togglePlayer();
-//             }
-
-//         }
-//         ))        
-//     }
-// }
-
-
 
 
 
@@ -148,7 +103,6 @@ fetch(url)
     .then(res => res.json())
     .then(res => {
         questions = res.items.map((element) => element.fields)
-        // game(questions)
         initialState(questions[0])
     })
 

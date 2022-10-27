@@ -3,6 +3,16 @@
     src: url(SuperMario256.ttf);
 }
 
+@font-face {
+    font-family: marioKart;
+    src: url(mario_kart_f2.ttf);
+}
+
+@font-face {
+    font-family: pixel;
+    src: url(PixelEmulator-xq08.ttf);
+}
+
 
 #game {
     height: 98vh;
@@ -85,4 +95,156 @@
     line-height: 4;
     background-color: #F8C4B4;
     border-radius: 15px;
+}
+
+
+/* -------------MODAL STYLING----------------------------------------------------------------------------- */
+.modal {
+    position: fixed;
+    height: 100%;
+    width: 99%;
+}
+
+/* -------------WELCOME MODAL----------------------------------------------------------------------------- */
+#welcome-modal {
+    background-color: white;
+    z-index: 3;
+}
+
+#welcome {
+    font-family: marioFont, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: -5px 0 black, 0 10px black, 10px 0 black, 0 -5px black;
+    color: #ed1c24;
+    margin: 200px auto;
+}
+
+#nintendo-logo {
+    height: 80px;
+}
+
+#start {
+    font-family: pixel, sans-serif;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+    color: #f1c906;
+    padding-top: 100px;
+    animation-name: wave;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#start span {
+    animation-name: wave;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY();
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#start span:nth-child(1) {
+    animation-delay: 0s;
+}
+#start span:nth-child(2) {
+    animation-delay: .1s;
+}
+#start span:nth-child(3) {
+    animation-delay: .2s;
+}
+#start span:nth-child(4) {
+    animation-delay: .3s;
+}
+#start span:nth-child(5) {
+    animation-delay: .4s;
+}
+#start span:nth-child(6) {
+    animation-delay: .5s;
+}
+#start span:nth-child(7) {
+    animation-delay: .6s;
+}
+#start span:nth-child(8) {
+    animation-delay: .7s;
+}
+#start span:nth-child(9) {
+    animation-delay: .8s;
+}
+#start span:nth-child(10) {
+    animation-delay: .9s;
+}
+#start span:nth-child(11) {
+    animation-delay: 1s;
+}
+#start span:nth-child(12) {
+    animation-delay: 1.1s;
+}
+#start span:nth-child(13) {
+    animation-delay: 1.2s;
+}
+#start span:nth-child(14) {
+    animation-delay: 1.3s;
+}
+#start span:nth-child(15) {
+    animation-delay: 1.4s;
+}
+#start span:nth-child(16) {
+    animation-delay: 1.5s;
+}
+#start span:nth-child(17) {
+    animation-delay: 1.6s;
+}
+
+/* -------------CHARACTER SELECT/PERSONALIZATION MODAL----------------------------------------------------------------------------- */
+#character-modal {
+    background-color: antiquewhite;
+    z-index: 2;
+}
+
+#character-select {
+    height: 600px;
+    width: 1000px;
+    margin: 80px auto;
+    border: 5px solid red;
+    border-radius: 20px;
+}
+
+#character-title {
+    text-align: center;
+    font-family: marioKart, sans-serif;
+    margin-top: 50px;
+
+}
+
+/* -------------VICTORY MODAL----------------------------------------------------------------------------- */
+#victory-modal {
+    background-color: cadetblue;
+    z-index: 1;
+}
+
+
+/* -------------STYLING FOR MARIO FONT----------------------------------------------------------------------------- */
+.blue {
+    color: #0d96d0;
+}
+
+.yellow {
+    color: #f1c906;
+}
+
+.red {
+    color: #de2825;
+}
+
+.green {
+    color: #42aa47;
 }
