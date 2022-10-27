@@ -8,6 +8,9 @@
 
     <!-- styling - css -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap" rel="stylesheet">
 
     <!-- js -->
     <script defer src="../js/script.js"></script>
@@ -21,6 +24,7 @@
             <h1>
                 <span class="blue">W</span><span class="yellow">e</span><span class="red">l</span><span class="green">c</span><span class="yellow">o</span><span class="red">m</span><span class="green">e</span>
                 <span class="yellow">t</span><span class="blue">o</span>
+                <span class="green">T</span><span class="red">h</span><span class="yellow">e</span>
             </h1>
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Nintendo_red_logo.svg/2560px-Nintendo_red_logo.svg.png" alt="nintendo logo" id="nintendo-logo">
             <h1>
@@ -42,7 +46,7 @@
         <div id="character-title">
             <h1>Choose Your Character</h1>
         </div>
-        <h2>Player 1 Choose</h2>
+        <h2 id="player-choosing">player 1 choose</h2>
         <div id="characters">
             <div class="character" id="char1"></div>
             <div class="character" id="char2"></div>
@@ -66,42 +70,45 @@
             <div class="players-select" id="player2-chara">
                 <h1>Player 2</h1>
                 <input type="text" placeholder="Player 2 Name" class="input" id="player2-input">
-                <img src="" class="char-selected" id="player1-char-selected">
+                <img src="" class="char-selected" id="player2-char-selected">
             </div>
         </div>
     </div>
 
 
-    <div id="game">
-        <div id="category">
-            <h3>Category</h3>
-        </div>
-        <img src="https://media.tenor.com/0V7BXvA3gBMAAAAi/gc25-team-gc25.gif" id="question-img">
-        <div id="question-box">
-            <p id="question">Question</p>
-        </div>
-        <div id="answers-div">
-            <div class="answers" id="ans1"></div>
-            <div class="answers" id="ans2"></div>
-            <div class="answers" id="ans3"></div>
-            <div class="answers" id="ans4"></div>
-        </div>
-        <div id="players-div">
-            <div class="players" id="player1">
-                <h1 id="player1-name">Player 1</h1>
-                <h2>Score: <br><span id="player1-score"></span></h2>
+
+    <div id="game-page">
+        <div id="game">
+            <div id="category">
+                <h3>Category</h3>
             </div>
-            <div class="players" id="player2">
-                <h1 id="player2-name">Player 2</h1>
-                <h2 id>Score: <br><span id="player2-score"></span></h2>
+            <img src="https://media.tenor.com/0V7BXvA3gBMAAAAi/gc25-team-gc25.gif" id="question-img">
+            <div id="question-box">
+                <p id="question">Question</p>
             </div>
+            <div id="answers-div">
+                <div class="answers" id="ans1"></div>
+                <div class="answers" id="ans2"></div>
+                <div class="answers" id="ans3"></div>
+                <div class="answers" id="ans4"></div>
+            </div>
+            <div id="players-div">
+                <div class="players" id="player1">
+                    <h1 id="player1-name">Player 1</h1>
+                    <h2 class="score">Score: <br><span id="player1-score"></span></h2>
+                </div>
+                <div class="players" id="player2">
+                    <h1 id="player2-name">Player 2</h1>
+                    <h2 class="score">Score: <br><span id="player2-score"></span></h2>
+                </div>
+            </div>
+            <button type="button" id="play-again-button">play again</button>
         </div>
     </div>
 
-
-    <div class="modal" id="victory-modal">
+    <!-- <div class="modal" id="victory-modal">
         <div id="victory-page"></div>
-    </div>
+    </div> -->
 
 
 </body>
