@@ -323,6 +323,7 @@ body {
     margin-top: 60px;
     animation: bounce 2s;
     animation-iteration-count: infinite;
+    cursor: pointer;
 }
 
 #how-to-modal {
@@ -333,7 +334,7 @@ body {
 
 #how-to {
     background-color: white;
-    height: 70%;
+    height: 75%;
     width: 60%;
     border-radius: 30px;
     text-align: center;
@@ -346,6 +347,8 @@ body {
 #how-to h1 {
     font-size: 40px;
     color: #de2825;
+    margin-top: 0px;
+    margin-bottom: -10px;
 }
 
 #how-to h2 {
@@ -645,7 +648,7 @@ body {
     justify-content: flex-end;
 }
 
-#play-again-button {
+.play-again-button {
     font-family: pretendo, sans-serif;
     font-size: 30px;
     height: 85px;
@@ -676,7 +679,7 @@ body {
     background-size: cover;
     font-family: marioFont, sans-serif;
     text-align: center;
-    /* display: none; */
+    display: none;
 }
 
 #tie-page {

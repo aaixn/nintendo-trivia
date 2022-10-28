@@ -19,6 +19,10 @@
 
 </head>
 <body>
+    <audio autoplay loop>
+        <source src="css/music/1-07 Sweet Sweet Canyon.mp3" type="audio/mpeg"/>
+    </audio>
+
     <div class="modal" id="welcome-modal" tabindex="-1">
         <div id="welcome">
             <h1>
@@ -50,6 +54,8 @@
         </div>
     </div>
 
+
+
     <div class="modal" id="how-to-modal">
         <div id="how-to">
             <button type="button" id="exit-how-to">X</button>
@@ -64,10 +70,13 @@
             <hr>
             <h3>
             You can get items for every 3 points you score.
+            Click the item box to get a random item. Click the item to use it! 
+            Don't worry about missing an opportunity to use your item, you may use your item at any point, even if it is not your turn!
+            <br><br>
             There are three items you may get by random.
             The Dash Mushroom is a speed item that lets you get ahead by awarding you 1 point.
-            The Red Shell is an offense item that hones in on your opponent and knocks them of 1 point.
-            Lastly, the Super Star is a speed and defense item that allows you invincibility for one question. Even if you get the question wrong, you will still gain a point!
+            The Red Shell is an offense item that hones in on your opponent and knocks off 1 point.
+            Lastly, the Super Star is a speed and defense item that allows you invincibility for one question. If you get it right, you will gain a point! But, even if you get the question wrong, you will not lose any points!
             Battle to see who can get more points to win the race!
             </h3>
             <div id="how-to-items">
@@ -89,6 +98,8 @@
             </div>
         </div>
     </div>
+
+
 
     <div class="modal" id="character-modal">
         <div id="char-title-grid">
@@ -124,6 +135,7 @@
             </div>
         </div>
     </div>
+
 
 
 
@@ -182,7 +194,7 @@
                 <img src="" alt="" class="win-screen-char" id="win-char">
             </div>
             <div id="divider">
-                <button type="button" id="play-again-button">play again</button>
+                <button type="button" class="play-again-button">play again</button>
             </div>
             <div class="victory-page-panel" id="lose">
                 <h1>Better Luck Next Time!</h1>
@@ -192,6 +204,8 @@
         </div>
     </div>
 
+
+
     <div class="modal" id="tie-modal">
         <div id="tie-page">
             <h1 id="tie-title">It's a Tie! <br>Good Job Everyone!</h1>
@@ -199,6 +213,7 @@
                 <img src="" alt="" id="tie-player1" class="tie-screen-char">
                 <img src="" alt="" id="tie-player2" class="tie-screen-char">
             </div>
+            <button type="button" class="play-again-button">play again</button>
         </div>
     </div>
 

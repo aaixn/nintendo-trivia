@@ -32,7 +32,7 @@ const startButton = document.querySelector('#start-button')
 const howToButton = document.querySelector('#how-to-button')
 const howToModal = document.querySelector('#how-to-modal')
 const exitHowTo = document.querySelector('#exit-how-to')
-const playAgainButton = document.querySelector('#play-again-button')
+const playAgainButton = document.querySelectorAll('.play-again-button')
 const gamePage = document.querySelector('#game-page')
 const victoryModal = document.querySelector('#victory-modal')
 const tieModal = document.querySelector('#tie-modal')
@@ -50,6 +50,14 @@ let questions = null
 let player1HasItem = false
 let player2HasItem = false
 
+
+///////////////////////////////////// HOW TO MODAL /////////////////////////////////////////////////////////////////////////////////////////////
+
+const music = document.querySelector('audio')
+music.volume = 0.01;
+
+
+///////////////////////////////////// ARRAY OF OBJECTS OF EACH CHARACTER'S DIFF IMAGES  /////////////////////////////////////////////////////////////////////////////////////////////
 
 const characterImages = [
     {
@@ -173,11 +181,11 @@ startButton.addEventListener('click', () => {
 
 
 ///////////////////////////////////// PLAY AGAIN BUTTON FUNCTIONALITY /////////////////////////////////////////////////////////////////////////////////////////////
-
-playAgainButton.addEventListener('click', () => {
+playAgainButton.forEach(element => element.addEventListener('click', () => {
     victoryModal.style.display = 'none'
+    tieModal.style.display = 'none'
     welcomeModal.style.display = 'block'
-})
+}))
 
 
 ///////////////////////////////////// CHARACTER SELECT /////////////////////////////////////////////////////////////////////////////////////////////
@@ -265,12 +273,12 @@ const items = [
 
 const checkForItem = () => {
 
-    if (player1CurrentScore%3 === 0 && player1CurrentScore !== 0 && player1HasItem === false) {
+    if (player1CurrentScore%3 === 0 && player1CurrentScore !== 0 && player1HasItem === false && togglePlayer() === 1) {
         player1HasItem = true
         player1Item.src = items[3].img
     }
 
-    if (player2CurrentScore%3 === 0 && player2CurrentScore !== 0 && player2HasItem === false) {
+    if (player2CurrentScore%3 === 0 && player2CurrentScore !== 0 && player2HasItem === false && togglePlayer() === 2) {
         player2HasItem = true
         player2Item.src = items[3].img
     }
@@ -293,7 +301,6 @@ item.forEach(element => {
 
     element.addEventListener('click', evt => {
         let playerItem = document.querySelector(`#${evt.target.id}`)
-        console.log(playerItem.id);
 
         if (playerItem.attributes.src.nodeValue === items[3].img) {
             playerItem.src = items[Math.floor(Math.random() * 3)].img
@@ -315,12 +322,12 @@ item.forEach(element => {
             if (playerItem.id === 'player1-item') {
                 player2CurrentScore--
                 player2Score.innerText = player2CurrentScore
-                player2HasItem = false
+                player1HasItem = false
                 playerItem.src = ''
             } else {
                 player1CurrentScore--
                 player1Score.innerText = player1CurrentScore
-                player1HasItem = false
+                player2HasItem = false
                 playerItem.src = ''
             }
 
@@ -404,11 +411,11 @@ answers.forEach(element => element.addEventListener('click', event => {
                 togglePlayer();
             }
             i++
-            console.log(i);
             questionNumber.innerText = `${i + 1} of 15`
             empty()
             if (i === questions.length) {
                 if (player1CurrentScore > player2CurrentScore) {
+                    console.log(player1CurrentScore, player2CurrentScore);
                     winningPlayer.innerText = player1Name.innerText
                     losingPlayer.innerText = player2Name.innerText
                     winChar.src = characterImages[player1CharIndex].win
@@ -431,9 +438,7 @@ answers.forEach(element => element.addEventListener('click', event => {
                 initialState()
                 return
             }
-            console.log(questions[i].category)
             category.innerText = questions[i].category
-            // img.src = questions[i].imageSource
             question.innerText = questions[i].question
             ans1.innerText = questions[i].a
             ans2.innerText = questions[i].b
@@ -442,8 +447,6 @@ answers.forEach(element => element.addEventListener('click', event => {
 
 
 }))
-
-
 
 
 ///////////////////////////////////// FETCH TRIVIA API /////////////////////////////////////////////////////////////////////////////////////////////
