@@ -310,12 +310,12 @@ item.forEach(element => {
                 player1CurrentScore++
                 player1Score.innerText = player1CurrentScore
                 player1HasItem = false
-                playerItem.src = ''
+                playerItem.src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png'
             } else {
                 player2CurrentScore++
                 player2Score.innerText = player2CurrentScore
                 player2HasItem = false
-                playerItem.src = ''
+                playerItem.src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png'
             }
 
         } else if (playerItem.attributes.src.nodeValue === items[1].img) {
@@ -323,12 +323,12 @@ item.forEach(element => {
                 player2CurrentScore--
                 player2Score.innerText = player2CurrentScore
                 player1HasItem = false
-                playerItem.src = ''
+                playerItem.src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png'
             } else {
                 player1CurrentScore--
                 player1Score.innerText = player1CurrentScore
                 player2HasItem = false
-                playerItem.src = ''
+                playerItem.src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png'
             }
 
         } else if (playerItem.attributes.src.nodeValue === items[2].img) {
@@ -336,12 +336,12 @@ item.forEach(element => {
                 player1CurrentScore++
                 player1Score.innerText = player1CurrentScore
                 player1HasItem = false
-                playerItem.src = ''
+                playerItem.src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png'
             } else {
                 player2CurrentScore++
                 player2Score.innerText = player2CurrentScore
                 player2HasItem = false
-                playerItem.src = ''
+                playerItem.src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png'
             }
 
         }
