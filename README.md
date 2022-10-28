@@ -12,6 +12,9 @@
 
 ## **List of the Technologies used**
 ***
+* JavaScript
+* HTML
+* CSS
 * [Contentful](https://www.contentful.com/) - used to make trivia questions api
 * [play.nintendo](https://play.nintendo.com/activities/skill-quizzes/) - used to formulate some questions
 
