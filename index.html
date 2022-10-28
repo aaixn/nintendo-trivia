@@ -19,6 +19,10 @@
 
 </head>
 <body>
+    <audio autoplay loop>
+        <source src="css/music/1-07 Sweet Sweet Canyon.mp3" type="audio/mpeg"/>
+    </audio>
+
     <div class="modal" id="welcome-modal" tabindex="-1">
         <div id="welcome">
             <h1>
@@ -33,21 +37,79 @@
             </h1>
             <div id="start">
                 <span>p</span><span>r</span><span>e</span><span>s</span><span>s</span>
+                <span>t</span><span>h</span><span>e</span>
+                <span>q</span><span>u</span><span>e</span><span>s</span><span>t</span><span>i</span><span>o</span><span>n</span>
+                <span>b</span><span>l</span><span>o</span><span>c</span><span>k</span>
+                <span>f</span><span>o</span><span>r</span>
+                <span>i</span><span>n</span><span>s</span><span>t</span><span>r</span><span>u</span><span>c</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
+                <span>o</span><span>r</span>
+                <br>
+                <span>p</span><span>r</span><span>e</span><span>s</span><span>s</span>
                 <span>e</span><span>n</span><span>t</span><span>e</span><span>r</span>
                 <span>t</span><span>o</span>
                 <span>s</span><span>t</span><span>a</span><span>r</span><span>t</span>
                 <span>.</span> <span>.</span> <span>.</span>
             </div>
+            <img src="https://mario.nintendo.com/static/43c8cd18a675d71a8c4136b601543d71/aac59/question-block.png" alt="how to play button" id="how-to-button">
         </div>
     </div>
 
 
+
+    <div class="modal" id="how-to-modal">
+        <div id="how-to">
+            <button type="button" id="exit-how-to">X</button>
+            <h1>How To Play</h1>
+            <h2>Introduction</h2>
+            <hr>
+            <h3>This trivia quiz game is a 2-player versus racing game inspired by Mario Kart. 
+            The trivia questions consist of general Nintendo questions as well as trivia questions for specific games by Nintendo.
+            Each player will be awarded 1 point for each correct question answered with no penalties for wrong answers.
+            However, beware of your opponent's usage of items! 
+            <h2>Using Items</h2>
+            <hr>
+            <h3>
+            You can get items for every 3 points you score.
+            Click the item box to get a random item. Click the item to use it! 
+            Don't worry about missing an opportunity to use your item, you may use your item at any point, even if it is not your turn!
+            <br><br>
+            There are three items you may get by random.
+            The Dash Mushroom is a speed item that lets you get ahead by awarding you 1 point.
+            The Red Shell is an offense item that hones in on your opponent and knocks off 1 point.
+            Lastly, the Super Star is a speed and defense item that allows you invincibility for one question. If you get it right, you will gain a point! But, even if you get the question wrong, you will not lose any points!
+            Battle to see who can get more points to win the race!
+            </h3>
+            <div id="how-to-items">
+                <div id="mushroom">
+                    <img src="css/images/items/mushroom.png" alt="" class="item">
+                    <br>
+                    Dash Mushroom
+                </div>
+                <div id="shell">
+                    <img src="css/images/items/shell.png" alt="" class="item">
+                    <br>
+                    Red Shell
+                </div>
+                <div id="star">
+                    <img src="css/images/items/star.png" alt="" class="item">
+                    <br>
+                    Super Star
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <div class="modal" id="character-modal">
-        <div id="character-title">
-            <h1>Choose Your Character</h1>
+        <div id="char-title-grid">
+            <div id="character-title">
+                <h1>Choose Your Character</h1>
+            </div>
         </div>
         <h2 id="player-choosing">player 1 choose</h2>
         <div id="characters">
+            <div class="character" id="char0"></div>
             <div class="character" id="char1"></div>
             <div class="character" id="char2"></div>
             <div class="character" id="char3"></div>
@@ -55,20 +117,19 @@
             <div class="character" id="char5"></div>
             <div class="character" id="char6"></div>
             <div class="character" id="char7"></div>
-            <div class="character" id="char8"></div>
         </div>
         <div id="player-input">
             <div class="players-select" id="player1-chara">
-                <h1>Player 1</h1>
+                <h1 id="player1-char-screen-name">Player 1</h1>
                 <input type="text" placeholder="Player 1 Name" class="input" id="player1-input">
                 <img src="" class="char-selected" id="player1-char-selected">
             </div>
             <div id="between-players">
-                <h1 id="vs">VS.</h1>
+                <h1 id="vs">VS</h1>
                 <button type="button" id="start-button">start</button>
             </div>
             <div class="players-select" id="player2-chara">
-                <h1>Player 2</h1>
+                <h1 id="player2-char-screen-name">Player 2</h1>
                 <input type="text" placeholder="Player 2 Name" class="input" id="player2-input">
                 <img src="" class="char-selected" id="player2-char-selected">
             </div>
@@ -77,14 +138,15 @@
 
 
 
+
     <div id="game-page">
         <div id="game">
             <div id="category">
                 <h3>Category</h3>
             </div>
-            <img src="https://media.tenor.com/0V7BXvA3gBMAAAAi/gc25-team-gc25.gif" id="question-img">
             <div id="question-box">
                 <p id="question">Question</p>
+                <p id="question-number"></p>
             </div>
             <div id="answers-div">
                 <div class="answers" id="ans1"></div>
@@ -96,19 +158,64 @@
                 <div class="players" id="player1">
                     <h1 id="player1-name">Player 1</h1>
                     <h2 class="score">Score: <br><span id="player1-score"></span></h2>
+                    <img src="" alt="player 1's character" class="playerGameChar" id="player1-game-char">
+                    <br>
+                    <img src="" alt="" class="item" id="player1-item">
                 </div>
+
+                <div id="racers-div">
+                    <div class="racer" id="racer1">
+                        <img src="" alt="" id="racer1-img">
+                    </div>
+                    <div class="racer" id="racer2">
+                        <img src="" alt="" id="racer2-img">
+                    </div>
+                </div>
+
                 <div class="players" id="player2">
                     <h1 id="player2-name">Player 2</h1>
                     <h2 class="score">Score: <br><span id="player2-score"></span></h2>
+                    <img src="" alt="player 2's character" class="playerGameChar" id="player2-game-char">
+                    <br>
+                    <img src="" alt="" class="item" id="player2-item">
                 </div>
             </div>
-            <button type="button" id="play-again-button">play again</button>
         </div>
     </div>
 
-    <!-- <div class="modal" id="victory-modal">
-        <div id="victory-page"></div>
-    </div> -->
+
+
+
+    <div class="modal" id="victory-modal">
+        <div id="victory-page">
+            <div class="victory-page-panel" id="win">
+                <h1>Congratulations!<br>You Win!</h1>
+                <h1 id="winning-player"></h1>
+                <img src="" alt="" class="win-screen-char" id="win-char">
+            </div>
+            <div id="divider">
+                <button type="button" class="play-again-button">play again</button>
+            </div>
+            <div class="victory-page-panel" id="lose">
+                <h1>Better Luck Next Time!</h1>
+                <h1 id="losing-player"></h1>
+                <img src="" alt="" class="win-screen-char" id="lose-char">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal" id="tie-modal">
+        <div id="tie-page">
+            <h1 id="tie-title">It's a Tie! <br>Good Job Everyone!</h1>
+            <div id="tie-players">
+                <img src="" alt="" id="tie-player1" class="tie-screen-char">
+                <img src="" alt="" id="tie-player2" class="tie-screen-char">
+            </div>
+            <button type="button" class="play-again-button">play again</button>
+        </div>
+    </div>
 
 
 </body>
