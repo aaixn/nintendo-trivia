@@ -415,7 +415,6 @@ answers.forEach(element => element.addEventListener('click', event => {
             empty()
             if (i === questions.length) {
                 if (player1CurrentScore > player2CurrentScore) {
-                    console.log(player1CurrentScore, player2CurrentScore);
                     winningPlayer.innerText = player1Name.innerText
                     losingPlayer.innerText = player2Name.innerText
                     winChar.src = characterImages[player1CharIndex].win
