@@ -333,12 +333,12 @@ item.forEach(element => {
 
         } else if (playerItem.attributes.src.nodeValue === items[2].img) {
             if (playerItem.id === 'player1-item') {
-                player1CurrentScore++
+                player1CurrentScore+=2
                 player1Score.innerText = player1CurrentScore
                 player1HasItem = false
                 playerItem.src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png'
             } else {
-                player2CurrentScore++
+                player2CurrentScore+=2
                 player2Score.innerText = player2CurrentScore
                 player2HasItem = false
                 playerItem.src = 'https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png'
