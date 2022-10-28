@@ -152,7 +152,7 @@ body {
 @keyframes shake {
     0% { transform: rotate(0deg); }
     25% { transform: rotate(5deg); }
-    50% { transform: rotate(0eg); }
+    50% { transform: rotate(0deg); }
     75% { transform: rotate(-5deg); }
     100% { transform: rotate(0deg); }
 }
@@ -191,16 +191,16 @@ body {
 
 @keyframes racing {
     0% {
-        translate: 0 0;
+        transform: translate(0);
     }
     33% {
-        translate: 80px 0;
+        transform: translate(80px, 0);
     }
     66% {
-        translate: -80px 0;
+        transform: translate(-80px, 0);
     }
     100% {
-        translate: 0 0;
+        transform: translate(0);
     }
 }
 
@@ -366,7 +366,7 @@ body {
 
 @keyframes bounce {
     0% {
-        transform: translateY();
+        transform: translateY(0px);
     }
     50% {
         transform: translateY(-20px);
