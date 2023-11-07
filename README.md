@@ -1,4 +1,4 @@
-# **Project-1: Nintendo Trivia**
+# **Nintendo Trivia**
 
 
 
@@ -20,7 +20,7 @@
 
 ## **Installation instructions**
 ***
-n/a
+Best viewed on resolution of 1920×1080. More responsive design planned for future.
 
 ## **Your User stories – who are your users, what do they want and why?**
 ***
