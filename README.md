@@ -36,15 +36,7 @@ Best viewed on resolution of 1920×1080. More responsive design planned for futu
 I didn't end up sticking very close to my original wireframe. I came up with a lot of ideas along the way and how I wanted to style it changed numerous times.
 ![wireframe](/appSS/wireframe.png)
 
-## **Descriptions of any Unsolved problems or major hurdles you had to overcome**
-***
-* Making code DRY - Noticed a lot of places where I could've made my code more DRY, but it was difficult to see that as I came up with a lot as I went along and thus didn't plan for it. Going back later, I plan on making my code much shorter and cleaner. I kind of get stuck in the groove and want to just churn it all out.
-
-* Styling - I am not 100% happy with the styling. I wanted the final product to have more of a consistent design, but I got strapped for time as I wanted to make sure the features I planned for got in.
-
-* Responsiveness - I really wanted to get to making the app responsive for mobile, but got strapped for time.
-
 
 **Resolutions**
 
-I'm definitely going to be going back to clean up my code where I can as well as include more annotating, making it responsive, and more work on the design. A little disappointed I wasn't able to make the app responsive for mobile in time as well as make the design better, but I had a lot of fun in this project nonetheless.
+Would love to work on this project further to optimize it for mobile as well in the future, but I had a lot of fun in this project nonetheless.
