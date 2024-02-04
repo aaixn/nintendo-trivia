@@ -227,14 +227,14 @@ body {
 #welcome {
     font-family: marioFont, sans-serif;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     text-shadow: -5px 0 black, 0 10px black, 10px 0 black, 0 -5px black;
     color: #ed1c24;
-    margin: 150px auto;
+    margin: 10vh auto;
 }
 
 #nintendo-logo {
-    height: 80px;
+    height: 10vh;
 }
 
 #start {
@@ -263,41 +263,53 @@ body {
 
 #how-to {
     background-color: white;
-    height: 75%;
-    width: 60%;
+    height: 75vh;
+    width: 80%;
     border-radius: 30px;
     text-align: center;
-    margin: 100px auto;
-    padding: 40px;
+    margin: 10vh auto;
+    padding: 1em 2.5em;
     font-family: 'Rubik', sans-serif;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.7);
 }
 
+#instructions {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+hr {
+    margin: 0;
+}
+
 #how-to h1 {
-    font-size: 40px;
+    font-size: 3vw;
     color: #de2825;
-    margin-top: 0px;
-    margin-bottom: -10px;
 }
 
 #how-to h2 {
     text-align: left;
+    font-size: 1.5vw
 }
 
-#how-to h3 {
+#how-to p {
     text-align: left;
     font-size: 20px;
-    line-height: 30px;
+    font-size: 1vw
 }
 
 .item {
-    height: 100px;
+    height: 8vw;
 }
 
 #how-to-items {
     display: flex;
     justify-content: center;
     gap: 50px;
+    font-size: 1vw;
 }
 
 #exit-how-to {
@@ -306,7 +318,7 @@ body {
     border: none;
     color: #666666;
     font-size: 20px;
-    margin: -10px -10px 0 0;
+    margin: 0 -1em;
     cursor: pointer;
 }
 
@@ -343,7 +355,7 @@ body {
 
 
 #character-title h1 {
-    font-size: 45px;
+    font-size: 2rem;
     -webkit-text-stroke: 2px black;
     width: 1400px;
     height: 50px;
@@ -357,7 +369,7 @@ body {
 
 #player-choosing {
     text-shadow: 3px 3px white;
-    font-size: 30px;
+    font-size: 1.5rem;
     margin: 50px 0 0 0;
     letter-spacing: 1px;
     animation: bounce 2s;
@@ -438,7 +450,7 @@ body {
     letter-spacing: 1px;
     height: 20px;
     line-height: 20px;
-    font-size: 16px;
+    font-size: 1rem;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -459,10 +471,12 @@ body {
 
 #player1-char-screen-name {
     color: #de2825;
+    font-size: 1.5rem;
 }
 
 #player2-char-screen-name {
     color: #0d96d0;
+    font-size: 1.5rem;
 }
 
 .input {
@@ -481,7 +495,7 @@ body {
 }
 
 .char-selected {
-    height: 200px;
+    height: 10vh;
     margin-top: 20px;
 }
 
@@ -490,7 +504,6 @@ body {
     font-size: 20px;
     height: 50px;
     width: 100px;
-    background-color: gray;
     color: white;
     border-radius: 15px;
     letter-spacing: 1px;
@@ -517,6 +530,7 @@ body {
     animation: spin 2s;
     animation-iteration-count: 1;
     display: none;
+    font-size: 2rem;
 }
 
 @keyframes spin {
@@ -592,6 +606,7 @@ body {
     margin-left: -80px;
     margin-bottom: 50px;
     cursor: pointer;
+    z-index: 2;
 }
 
 .win-screen-char {
